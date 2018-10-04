@@ -1,0 +1,22 @@
+An improvement to the system would be if a noun would be able to take
+more attributes than one at once. For example instead of adding:
+  John is a dog.
+  John is brown.
+we could simply type it as:
+  John in a brown dog.
+
+The system is quite ambigious sometimes. For examle long sentences like:
+  Who likes a person who cooks and cleans?
+could have two parse trees. The system cannot understand if we are looking
+for someone who cleans and likes a person who cooks or we are looking for
+someone who likes a person who cooks and who cleans. This ambiguity can be
+removed for example with having a probabilistic context-free grammar applied
+to the system. This way the system will know the most likely parse tree.
+
+The negative word "not" can be added so that we could have negative sentences apart from 
+the positive ones. 
+
+We could extend transitive verbs in statements to handle not only proper nouns, but any noun phrase. 
+Right now sentences like "John likes dogs" are not accepted by the system. So in order to improve this
+we could change our system to accept non proper nouns or noun phrase, instead of returning the error 
+"smth isn't a proper name". It will not be too hard to implement with the knowledge we have so far.
